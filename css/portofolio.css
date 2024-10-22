@@ -1,0 +1,91 @@
+#porto-folio {
+  font-family: 'neue-montreal-bold';
+  color: var(--black);
+  padding: 5vw;
+  padding-top: 100px;
+}
+#porto-folio div:nth-child(1) {
+  font-size: 10vw;
+}
+#porto-folio div:nth-child(2) {
+  font-family: 'neue-montreal-medium';
+  font-weight: 300;
+  margin-bottom: 30px;
+  text-align: right;
+}
+#porto-folio div:nth-child(3) {
+  font-family: 'neue-montreal-medium';
+  text-align: right;
+}
+#showcase {
+  font-family: 'neue-montreal-medium';
+  color: white;
+  margin: 5vw;
+  background-image: url(../images/bela-tarr-s.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: calc(100% - 10vw);
+}
+#showcase .showcase-content {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+#showcase .showcase-content .the-showcase {
+  width: fit-content;
+  height: fit-content;
+  padding: 2vw;
+  transition: all 0.5s;
+}
+#showcase .showcase-content .the-showcase .the-s-second {
+  background-color: black;
+}
+#showcase .showcase-content .the-showcase .the-s-title {
+  font-size: 5vh;
+}
+#showcase .arrow-nav {
+  background-color: var(--white);
+  border: 1px solid var(--black);
+  width: fit-content;
+  transition: all 0.5s;
+  height: 30px;
+  display: grid;
+  color: var(--black);
+  place-items: center;
+  padding: 25px;
+  position: relative;
+}
+#showcase .arrow-nav:hover {
+  background-color: var(--black);
+  color: var(--white);
+  border: 1px solid var(--white);
+}
+#showcase .arrow-nav.left {
+  border-radius: 5px 25px 25px 5px;
+}
+#showcase .arrow-nav.right {
+  border-radius: 25px 5px 5px 25px;
+}
+#showcase {
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  justify-content: center;
+  grid-template-columns: auto 1fr auto;
+}
+
+@media only screen and (max-width: 991px),
+  screen and (max-width: 1024px) and (orientation: portrait) {
+  #porto-folio div:nth-child(2) {
+    text-align: left;
+    margin-top: 30px;
+  }
+  #porto-folio div:nth-child(3) {
+    text-align: left;
+  }
+  #showcase .showcase-content .the-showcase {
+    text-align: center;
+    font-size: 2vh;
+  }
+}

@@ -1,0 +1,505 @@
+#big-name {
+  font-family: 'neue-montreal-bold';
+  font-size: 13vw ;
+  color: var(--black);
+  padding-top: 5vw;
+  padding-left: 5vw;
+  padding-right: 5vw;
+}
+.fahrel {
+  position: relative;
+  top: -70px;
+}
+.fahrel span {
+  opacity: 0;
+  display: inline-block;
+}
+.fahrel span.visible {
+  opacity: 1;
+}
+
+#i-create {
+  font-size: 10vh;
+  width: fit-content;
+  height: 95vh;
+  display: grid;
+  padding-left: 5vw;
+  padding-right: 5vw;
+  place-items: center;
+}
+#i-create .text-i-create {
+  text-align: center;
+  width: 90%;
+  transform: scale(0.5);
+  opacity: 0;
+  font-family: 'neue-montreal-medium';
+  color: var(--black);
+  transition: transform 1s ease, opacity 1s ease;
+}
+@keyframes popIn {
+  0% {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+.animate-pop {
+  animation: popIn 1s ease forwards;
+}
+#ability {
+  height: 90vh;
+  display: grid;
+  place-items: center;
+}
+#ability .aDiv {
+  width: 100%;
+}
+#ability .aDiv .a1,
+#ability .aDiv .a2,
+#ability .aDiv .a3 {
+  border-top: 2px solid var(--black);
+  border-bottom: 2px solid var(--black);
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  justify-items: center;
+  align-items: center;
+  padding-left: 5vw;
+  padding-right: 5vw;
+  overflow: hidden;
+  transition: all 0.5s;
+  height: 88px;
+  width: calc(100% - 10vw);
+  color: var(--black);
+}
+#ability .aDiv .a1 .title,
+#ability .aDiv .a2 .title,
+#ability .aDiv .a3 .title {
+  font-family: 'neue-montreal-medium';
+  font-size: 2.5em;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-items: center;
+  align-items: center;
+}
+#ability .aDiv .a1 .title .clickExpand1,
+#ability .aDiv .a2 .title .clickExpand2,
+#ability .aDiv .a3 .title .clickExpand3 {
+  width: 30px;
+  height: 30px;
+  display: grid;
+  place-items: center;
+}
+#ability .aDiv .a1 .title .clickExpand1 div,
+#ability .aDiv .a2 .title .clickExpand2 div,
+#ability .aDiv .a3 .title .clickExpand3 div {
+  width: 20px;
+  position: absolute;
+  transition: all 0.5s;
+  height: 3px;
+  background-color: var(--black);
+}
+#ability .aDiv .a1 .title .clickExpand1 div:nth-child(1),
+#ability .aDiv .a2 .title .clickExpand2 div:nth-child(1),
+#ability .aDiv .a3 .title .clickExpand3 div:nth-child(1) {
+  transform: rotate(90deg);
+}
+#ability .aDiv .a1 .title .clickExpand1 div:nth-child(1).expanded,
+#ability .aDiv .a2 .title .clickExpand2 div:nth-child(1).expanded,
+#ability .aDiv .a3 .title .clickExpand3 div:nth-child(1).expanded {
+  transform: rotate(0deg);
+}
+#ability .aDiv .a1.expanded,
+#ability .aDiv .a2.expanded,
+#ability .aDiv .a3.expanded {
+  height: 350px;
+}
+#ability .aDiv .a1 .paragraph,
+#ability .aDiv .a2 .paragraph,
+#ability .aDiv .a3 .paragraph {
+  width: 80%;
+  font-family: 'neue-montreal-light';
+  font-size: 4vh;
+  text-align: center;
+}
+#ability .aDiv .a2,
+#ability .aDiv .a3 {
+  border-top: 0px solid transparent;
+}
+.a1,
+.a2,
+.a3 {
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: opacity 1s, transform 1s;
+}
+
+.a1.show,
+.a2.show,
+.a3.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+#i-said {
+  padding-left: 5vw;
+  padding-right: 5vw;
+  display:flex;
+  font-size: 2.5em;
+  height: 100vh;
+  width: calc(100% - 10vw);
+  overflow: hidden;
+  text-align: right;
+  color: var(--black);
+  font-family: 'neue-montreal-medium';
+  align-items: center;
+}
+
+#i-said .i-said-text {
+  position: relative;
+  padding-right: 10vw;
+}
+#i-said .i-said-circle {
+  display: flex;
+  height: fit-content;
+  flex-direction: column;
+  position: relative;
+  padding-left: 10vw;
+}
+#i-said .i-said-circle div {
+  border-radius: 50%;
+  border: 2px solid var(--black);
+  width: 350px;
+  position: relative;
+  transition: all 1s;
+  height: 350px;
+}
+#i-said .i-said-circle div:nth-child(1) {
+  transform: translateY(250px);
+}
+#i-said .i-said-circle div:nth-child(3) {
+  transform: translateY(-250px);
+}
+#i-said .i-said-circle div:nth-child(1).out {
+  transform: translateY(350px);
+}
+#i-said .i-said-circle div:nth-child(3).out {
+  transform: translateY(-350px);
+}
+.first-p,
+.second-p {
+  position: relative;
+  opacity: 0;
+  transform: translateY(-30px);
+  transition: opacity 1s, transform 1s;
+}
+
+.first-p.show,
+.second-p.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+#steps {
+  height: fit-content;
+  margin-top: 5vw;
+}
+#steps .step1,
+#steps .step2,
+#steps .step3,
+#steps .step4 {
+  display: flex;
+  padding-left: 10vw;
+  padding-right: 10vw;
+  height: 200px;
+  padding-top: 33px;
+  padding-bottom: 33px;
+  border-top: 2px solid var(--black);
+  border-bottom: 2px solid var(--black);
+}
+#steps .step1 .number,
+#steps .step2 .number,
+#steps .step3 .number,
+#steps .step4 .number {
+  font-size: 6em;
+  padding-right: 5vw;
+  color: var(--black);
+  font-family: 'neue-montreal-bold';
+}
+#steps .step1 .title-desc .title,
+#steps .step2 .title-desc .title,
+#steps .step3 .title-desc .title,
+#steps .step4 .title-desc .title {
+  font-family: 'neue-montreal-medium';
+  font-size: 3em;
+  color: var(--black);
+  margin-bottom: 33px;
+}
+#steps .step1 .title-desc .desc,
+#steps .step2 .title-desc .desc,
+#steps .step3 .title-desc .desc,
+#steps .step4 .title-desc .desc {
+  font-family: 'neue-montreal-light';
+  color: var(--black);
+  font-weight: 700;
+  font-size: 1.3em;
+}
+#steps .step2,
+#steps .step3,
+#steps .step4 {
+  border-top: 0px solid transparent;
+}
+
+.the-step,
+.title-for-,
+.title-project,
+.components-project,
+.button-project,
+.image {
+  position: relative;
+  opacity: 0;
+  transform: translateY(-30px);
+  transition: opacity 1s, transform 1s;
+}
+
+.the-step.show,
+.title-for-.show,
+.title-project.show,
+.components-project.show,
+.button-project.show,
+.image.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+#featured-project {
+  display: flex;
+  flex-direction: column;
+  padding-left: 10vw;
+  padding-right: 10vw;
+}
+#featured-project .title-for- {
+  font-family: 'neue-montreal-bold';
+  font-size: 6em;
+  color: var(--black);
+  padding-top: 10vw;
+  width: 100%;
+}
+#featured-project .content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding-top: 10vw;
+  padding-bottom: 10vw;
+}
+#featured-project .content .text {
+  width: 100%;
+  padding-top: 5vw;
+}
+#featured-project .content .text .title-project {
+  font-size: 3em;
+  color: var(--black);
+  font-family: 'neue-montreal-medium';
+  border-bottom: 2px solid var(--black);
+}
+#featured-project .content .text .components-project {
+  font-size: 1.5em;
+  color: var(--black);
+  padding-top: 5vw;
+  padding-bottom: 33px;
+  font-weight: 700;
+  font-family: 'neue-montreal-light';
+  border-bottom: 2px solid var(--black);
+}
+#featured-project .content .text .button-project button {
+  border: 2px solid var(--black);
+  margin-top: 5vw;
+  background-color: transparent;
+  overflow: hidden;
+  height: 50px;
+  width: 150px;
+  border-radius: 5vw;
+  transition: all 0.5s;
+}
+#featured-project .content .text .button-project button:hover {
+  background-color: var(--black);
+  border: 2px solid var(--white);
+}
+#featured-project .content .text .button-project button:hover a {
+  color: var(--white);
+}
+#featured-project .content .text .button-project button a {
+  text-decoration: none;
+  color: var(--black);
+  width: 100%;
+  padding: 10px;
+  height: 100%;
+  font-family: 'neue-montreal-medium';
+}
+#featured-project .content .image {
+  display: grid;
+  padding-left: 5vw;
+  padding-right: 2.5vw;
+  place-items: center;
+}
+#featured-project .content .image div {
+  width: 100%;
+  height: 100%;
+  background-image: url(../images/bela-tarr.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border: 2px solid var(--black);
+}
+
+@media screen and (max-width: 1400px) {
+  #big-name {
+    font-size: 10em;
+  }
+  #i-create {
+    font-size: 5em;
+    height: fit-content;
+  }
+  #ability {
+    height: fit-content;
+    padding-top: 5vw;
+    padding-bottom: 5vw;
+  }
+  #ability .aDiv .a1,
+  #ability .aDiv .a2,
+  #ability .aDiv .a3 {
+    height: 68px;
+  }
+  #ability .aDiv .a1 .title,
+  #ability .aDiv .a2 .title,
+  #ability .aDiv .a3 .title {
+    font-size: 1.3em;
+  }
+  #ability .aDiv .a1.expanded,
+  #ability .aDiv .a2.expanded,
+  #ability .aDiv .a3.expanded {
+    height: 450px;
+  }
+  #i-said {
+    font-size: 2em;
+    height: fit-content;
+  }
+  #i-said .i-said-text {
+    padding-right: 5vw;
+    top: 0px;
+  }
+  #i-said .i-said-circle {
+    top: 0px;
+  }
+  #i-said .i-said-circle div {
+    width: 150px;
+    height: 150px;
+    margin: 0 auto;
+  }
+  #i-said .i-said-circle div:nth-child(1) {
+    transform: translateY(250px);
+  }
+  #i-said .i-said-circle div:nth-child(3) {
+    transform: translateY(-250px);
+  }
+  #i-said .i-said-circle div:nth-child(1).out {
+    transform: translateY(150px);
+  }
+  #i-said .i-said-circle div:nth-child(3).out {
+    transform: translateY(-150px);
+  }
+  #steps .step1,
+  #steps .step2,
+  #steps .step3,
+  #steps .step4 {
+    height: 400px;
+  }
+  #featured-project .content {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+  #featured-project .content .text {
+    grid-row: 2;
+  }
+  #featured-project .content .image {
+    grid-row: 1;
+  }
+}
+@media screen and (max-width: 800px) {
+  #big-name {
+    display: none;
+  }
+  #i-create {
+    font-size: 2.5em;
+    padding-left: 5vw;
+    padding-right: 5vw;
+    width: calc(100% - 10vw);
+    height: 100vh;
+  }
+  #ability .aDiv .a1,
+  #ability .aDiv .a2,
+  #ability .aDiv .a3 {
+    padding-left: 5vw;
+    padding-right: 5vw;
+    width: calc(100% - 10vw);
+    height: 75px;
+  }
+  #ability .aDiv .a1 .title,
+  #ability .aDiv .a2 .title,
+  #ability .aDiv .a3 .title {
+    font-size: 1.4em;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  #ability .aDiv .a1.expanded,
+  #ability .aDiv .a2.expanded,
+  #ability .aDiv .a3.expanded {
+    height: 550px;
+  }
+  #ability .aDiv .a1 .paragraph,
+  #ability .aDiv .a2 .paragraph,
+  #ability .aDiv .a3 .paragraph {
+    padding-bottom: 33px;
+    text-align: left;
+  }
+  #i-said {
+    flex-direction: column;
+  }
+
+  #steps .step1,
+  #steps .step2,
+  #steps .step3,
+  #steps .step4 {
+    flex-direction: column;
+    border-top: 0px solid var(--black);
+    border-bottom: 0px solid var(--black);
+    padding-left: 33px;
+    padding-right: 33px;
+    height: 550px;
+  }
+  #steps .step1 .title-desc .title,
+  #steps .step2 .title-desc .title,
+  #steps .step3 .title-desc .title,
+  #steps .step4 .title-desc .title {
+    font-size: 2em;
+  }
+  #steps .step4 {
+    border-bottom: 2px solid var(--black);
+  }
+  #featured-project {
+    padding-left: 33px;
+    padding-right: 33px;
+  }
+  #featured-project .title-for- {
+    font-size: 3em;
+    padding-top: 16px;
+  }
+  #featured-project .content .image {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+}
