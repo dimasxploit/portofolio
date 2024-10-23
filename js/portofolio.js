@@ -5,11 +5,11 @@ const theTitle = document.querySelector('.the-s-title')
 
 const showcaseData = [
   {
-    backgroundImage: 'url(portofolio/images/bela-tarr-s.png)',
+    backgroundImage: 'url(images/bela-tarr-s.png)',
     title: 'BELA TARR',
   },
   {
-    backgroundImage: 'url(portofolio/images/pos-psikologi-s.png)',
+    backgroundImage: 'url(images/pos-psikologi-s.png)',
     title: 'POS PSIKOLOGI',
   },
 ]
