@@ -38,9 +38,9 @@
   padding: 2vw;
   transition: all 0.5s;
 }
-#showcase .showcase-content .the-showcase .the-s-second {
+/* #showcase .showcase-content .the-showcase .the-s-second {
   background-color: black;
-}
+} */
 #showcase .showcase-content .the-showcase .the-s-title {
   font-size: 5vh;
 }
